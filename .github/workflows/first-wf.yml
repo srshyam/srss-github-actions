@@ -9,7 +9,7 @@ jobs:
       - name: List directory and files
         run: ls -lart
       - name: Install dependencies
-        run: npm install
+        run: npm ci
       - name: Run Lint in the code
         run: npm run lint
       - name: Test code
