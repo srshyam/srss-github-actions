@@ -6,6 +6,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+      - name: List directory and files
+        run: ls -lart
       - name: Install dependencies
         run: npm install
       - name: Run Lint in the code
