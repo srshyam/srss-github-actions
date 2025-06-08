@@ -1,8 +1,8 @@
 name: Output
 on: [push, workflow_dispatch]
 jobs:
-  output:
+  output-info:
     runs-on: ubuntu-latest
     steps:
       - name: Test output
-        run: echo "This is the testoutput"
+        run: echo "This is the testoutput. ${{ toJSON(github.event) }}"
