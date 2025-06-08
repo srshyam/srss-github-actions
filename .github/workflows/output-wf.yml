@@ -1,0 +1,8 @@
+name: First workflow Lint, Test, and Deploy
+on: [push, workflow_dispatch]
+jobs:
+  output:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test output
+        run: echo "This is the testoutput"
