@@ -1,5 +1,7 @@
 name: Output workflow
-on: [push, workflow_dispatch]
+on: 
+  pull_request:
+    types: closed
 jobs:
   output-info:
     runs-on: ubuntu-latest
