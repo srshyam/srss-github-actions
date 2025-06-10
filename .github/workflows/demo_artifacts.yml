@@ -42,5 +42,7 @@ jobs:
           uses: actions/download-artifact@v4
           with:
             name: build-Artifacts
+        - name: List directory and files
+          run: ls -lart
         - name: Deploying Artifacts
           run: echo "Deploying the artifacts ....... !!"
