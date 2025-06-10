@@ -1,8 +1,6 @@
 name: First workflow Lint, Test, and Deploy
 on: 
   pull_request:
-    types:
-      - opened
 jobs:
   lint-test-build-deploy-dev-poc:
     runs-on: ubuntu-latest
