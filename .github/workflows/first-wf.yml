@@ -1,7 +1,10 @@
 name: First workflow Lint, Test, and Deploy
-on: [push, workflow_dispatch]
+on: 
+  pull_request:
+    types:
+      - opened
 jobs:
-  lint:
+  lint-test-build-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
