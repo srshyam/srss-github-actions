@@ -1,6 +1,5 @@
 name: First workflow Lint, Test, and Deploy
-on: 
-  pull_request:
+on: [push, pull_request]
 jobs:
   lint-test-build-deploy-dev-poc:
     runs-on: ubuntu-latest
