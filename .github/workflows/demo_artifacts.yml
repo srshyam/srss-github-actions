@@ -39,4 +39,4 @@ jobs:
       needs: build
       steps:
         - name: Deploying Artifacts
-          run: echo :Deploying the artifacts ....... !!"
+          run: echo "Deploying the artifacts ....... !!"
