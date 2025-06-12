@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - dev-poc
+  workflow_dispatch:
 jobs:
   lint-test:
     runs-on: ubuntu-latest
