@@ -58,4 +58,6 @@ jobs:
         - name: List directory and files
           run: ls -lart
         - name: Deploying Artifacts
-          run: echo "Deploying the artifacts ....... !!"
+          run: |
+            echo "Deploying the artifacts ....... !!"
+            sleep 500s
