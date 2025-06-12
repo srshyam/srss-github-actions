@@ -14,7 +14,7 @@ jobs:
         with: 
           path: ~/.npm
           key: dependencies-node-modules-${{hashFiles('**/package-lock.json ')}}
-      - name: Install dependencies
+      - name: Install dependency
         run: npm ci
       - name: Run lint-tests
         run: npm run lint
