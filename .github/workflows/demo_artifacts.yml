@@ -21,6 +21,11 @@ jobs:
         run: npm run lint
       - name: Test Code
         run: npm run test
+      - name: Upload Test reports
+        uses: actions/upload-artifacts@v3
+        with:
+          name: test-reports
+          path: test.json
 
   build:
     needs: lint-test
@@ -61,4 +66,3 @@ jobs:
         - name: Deploying Artifacts
           run: |
             echo "Deploying the artifacts ....... !!"
-            sleep 500s
