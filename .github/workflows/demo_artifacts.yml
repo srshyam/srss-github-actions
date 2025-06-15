@@ -73,8 +73,10 @@ jobs:
 
   deploy:
     needs: build
-    uses: ./.github/workflows/reusable-wf.yml  
-    
+    uses: ./.github/workflows/reusable-wf.yml
+    with:
+      artifact-name: 'build-Artifacts'
+
   report:
     runs-on: ubuntu-latest
     needs: [lint-test, build, deploy]
