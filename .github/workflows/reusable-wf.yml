@@ -15,7 +15,7 @@ on:
 jobs:
   deploy:
     outputs:
-      deploy-status: ${{ steps.set-result.output.set-deploy }}
+      deploy-status: ${{ steps.set-result.outputs.status }}
     runs-on: ubuntu-latest
     steps:
       - name: Download Artifacts
@@ -29,4 +29,4 @@ jobs:
           echo "Deploying the artifacts ....... !!"
       - name: Set output
         id: set-result
-        run: echo "set-deploy= success" >> $GITHUB_OUTPUT
+        run: echo "status=success" >> $GITHUB_OUTPUT
