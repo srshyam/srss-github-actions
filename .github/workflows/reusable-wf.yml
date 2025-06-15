@@ -7,9 +7,15 @@ on:
         required: true
         default: 'default-artifact'
         type: string
+    outputs:
+      result:
+        description: 'Outputs from the deploy job'
+        value: ${{ jobs.deploy.outputs.deploy-status }}
 
 jobs:
   deploy:
+    outputs:
+      deploy-status: ${{ steps.set-result.output.set-deploy }}
     runs-on: ubuntu-latest
     steps:
       - name: Download Artifacts
@@ -21,3 +27,6 @@ jobs:
       - name: Deploying Artifacts
         run: |
           echo "Deploying the artifacts ....... !!"
+      - name: Set output
+        id: set-result
+        run: echo "set-deploy= success" >> $GITHUB_OUTPUT
