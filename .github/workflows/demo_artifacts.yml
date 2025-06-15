@@ -1,3 +1,4 @@
+
 name: Upload and Download Artifacts workflow - demo
 on:
   push:
@@ -53,22 +54,26 @@ jobs:
             dist
             package.json
     
+  # deploy:
+  #     runs-on: ubuntu-latest
+  #     needs: build
+  #     concurrency:
+  #       group: ${{github.ref}}
+  #       cancel-in-progress: true
+  #     steps:
+  #       - name: Dowanload Artifacts
+  #         uses: actions/download-artifact@v4
+  #         with:
+  #           name: build-Artifacts
+  #       - name: List directory and files
+  #         run: ls -lart
+  #       - name: Deploying Artifacts
+  #         run: |
+  #           echo "Deploying the artifacts ....... !!"
+
   deploy:
-      runs-on: ubuntu-latest
-      needs: build
-      concurrency:
-        group: ${{github.ref}}
-        cancel-in-progress: true
-      steps:
-        - name: Dowanload Artifacts
-          uses: actions/download-artifact@v4
-          with:
-            name: build-Artifacts
-        - name: List directory and files
-          run: ls -lart
-        - name: Deploying Artifacts
-          run: |
-            echo "Deploying the artifacts ....... !!"
+    needs: build
+    uses: ./.github/workflows/reusable-wf.yml  
     
   report:
     runs-on: ubuntu-latest
