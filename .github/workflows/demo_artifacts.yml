@@ -68,3 +68,13 @@ jobs:
         - name: Deploying Artifacts
           run: |
             echo "Deploying the artifacts ....... !!"
+    
+  report:
+    runs-on: ubuntu-latest
+    needs: [lint-test, build, deploy]
+    if: failure()
+    steps:
+      - name: Report stage
+        run: |
+          echo "The workflow has failed, please check the test reports and build artifacts."
+          echo "${{ github }}"
