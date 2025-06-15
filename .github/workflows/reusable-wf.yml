@@ -4,7 +4,7 @@ on:
     inputs:
       artifact-name:
         description: 'The name of the artifact to deploy'
-        required: true
+        required: false
         default: 'default-artifact'
         type: string
 
