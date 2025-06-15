@@ -77,4 +77,4 @@ jobs:
       - name: Report stage
         run: |
           echo "The workflow has failed, please check the test reports and build artifacts."
-          echo "${{ github }}"
+          echo "${{ toJSONgithub }}"
