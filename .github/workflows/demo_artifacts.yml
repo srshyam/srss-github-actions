@@ -3,7 +3,13 @@ name: Upload and Download Artifacts workflow - demo
 on:
   push:
     branches:
-      - dev-poc
+      - master
+  pull_request:
+    branches:
+      - master
+  merge_group:
+    branches:
+      - master
   workflow_dispatch:
 jobs:
   lint-test:
