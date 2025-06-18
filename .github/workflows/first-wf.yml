@@ -1,10 +1,9 @@
 name: First workflow Lint, Test, and Deploy
 on: 
   pull_request:
-    types:
-      - opened
+    types: closed
 jobs:
-  lint-test-build-deploy:
+  lint-test-build-deploy-dev-poc:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
