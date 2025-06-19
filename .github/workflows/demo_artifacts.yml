@@ -1,5 +1,5 @@
 
-name: Upload and Download Artifacts workflow - demo
+name: Merge queue test 2 branch
 on:
   push:
     branches:
