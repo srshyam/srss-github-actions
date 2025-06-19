@@ -3,7 +3,7 @@ name: Upload and Download Artifacts workflow - demo
 on:
   push:
     branches:
-      - master
+      - dev-poc
   pull_request:
     branches:
       - master
