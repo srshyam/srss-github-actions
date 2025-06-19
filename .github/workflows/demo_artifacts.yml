@@ -1,5 +1,5 @@
 
-name: Upload and Download Artifacts workflow - demo
+name: Upload and Download Artifacts workflow
 on:
   push:
     branches:
