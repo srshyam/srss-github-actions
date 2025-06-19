@@ -3,7 +3,7 @@ name: Reusable workflow and Merge queue - demo
 on:
   push:
     branches:
-      - dev-poc
+      - master
   pull_request:
     branches:
       - master
@@ -15,7 +15,7 @@ jobs:
   lint-test:
     runs-on: ubuntu-latest
     steps:
-      - name: Code Checkouts
+      - name: Code Checkout
         uses: actions/checkout@v3
       - name: Cache dependencies
         uses: actions/cache@v4
