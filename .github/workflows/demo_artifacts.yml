@@ -1,5 +1,5 @@
 
-name: Upload and Download Artifacts workflow - demo
+name: Reusable workflow and Merge queue - demo
 on:
   push:
     branches:
