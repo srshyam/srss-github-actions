@@ -1,5 +1,5 @@
 
-name: Merge queue test-1 branch -demo
+name: Merge queue test-1 branch -demo2
 on:
   push:
     branches:
