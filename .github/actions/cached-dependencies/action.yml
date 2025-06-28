@@ -6,7 +6,6 @@ runs:
     - name: Cache dependencies   
       id: cache-dependencies
       uses: actions/cache@v4
-      run: echo "Caching dependencies using Custom workflow"
       with: 
           path: ~/.npm
           key: dependencies-node-modules-${{hashFiles('**/package-lock.json')}}
