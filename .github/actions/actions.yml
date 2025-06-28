@@ -1,0 +1,15 @@
+name: 'Cache and install dependencies actions'
+description: 'Cache and install dependencies actions'
+runs:
+  using: 'composite'
+  steps:
+    - name: Cache dependencies   
+      id: cache-dependencies
+      uses: actions/cache@v4
+      with: 
+          path: ~/.npm
+          key: dependencies-node-modules-${{hashFiles('**/package-lock.json ')}}
+    - name: Install dependencies
+      if: steps.cache-dependencies.outputs.cache-hit != 'true'
+      run: npm ci   
+      shell: bash
