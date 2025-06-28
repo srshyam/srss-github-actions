@@ -20,7 +20,7 @@ jobs:
       - name: Code Checkout
         uses: actions/checkout@v3
       - name: Cache dependencies
-        uses: ./.github/actions/action.yml
+        uses: ./.github/actions/cached-dependencies
       - name: Run lint-tests
         run: npm run lint
       - name: Test Code
