@@ -1,4 +1,4 @@
-testcommit1
-testcommit2
-testcommit3 from testpr1
-testcommit4 from dev branch
+test-pr1
+test-pr2
+test-pr3
+test-pr4
