@@ -89,6 +89,11 @@ jobs:
     steps:
       - name: Print Output from deploy job
         run: echo ${{ needs.deploy.outputs.result }}
+      - name: Fail on merge_group (for demo)
+        if: github.event_name == 'merge_group'
+        run: |
+          echo "Intentionally failing this step for merge_group event."
+          exit 1
 
   report:
     runs-on: ubuntu-latest
